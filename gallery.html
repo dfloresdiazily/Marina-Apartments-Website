@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Marina Apartments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<nav>
+    <img class="toplogo" src="images/Marina.png" />
+    <div class="link-group">
+        <a href="index.html">Home</a>
+        <a href="floorPlan.html">Floor Plans</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="neighborhood.html">Neighborhood</a>
+        <a href="contact.html">contact</a>
+    </div>
+</nav>
+
+<main>
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="./images/apartmentscenery.jpg" alt="Exterior view of the apartment building" onclick="openModal(this.src)">
+        <img src="./images/downtown.jpg" alt="View of downtown from the apartment" onclick="openModal(this.src)">
+        <img src="./images/interior.jpg" alt="Interior view of an apartment" onclick="openModal(this.src)">
+        <img src="./images/livingroom.jpg" alt="Living room of the apartment" onclick="openModal(this.src)">
+        <img src="./images/photo5.jpg" alt="Additional view of the apartment" onclick="openModal(this.src)">
+        <img src="./images/photo6.jpg" alt="Another view of the apartment" onclick="openModal(this.src)">
+        <!-- Add more images as needed -->
+    </div>
+    
+    <div class="modal" id="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="Modal Image">
+    </div>
+</main>
+
+<script>
+    function openModal(src) {
+        document.getElementById("modal-img").src = src;
+        document.getElementById("modal").style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+</script>
+
+<footer>
+    <p>Marina Center | Coeur d'Alene, ID 83814 | (208) 555-1111</p>
+    <p>&copy; 2024 Marina Apartment Complex</p>
+</footer>
+
+</body>
+</html>
